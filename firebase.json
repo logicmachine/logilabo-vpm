@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "logilabo-vpm",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

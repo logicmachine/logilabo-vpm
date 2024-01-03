@@ -1,0 +1,43 @@
+name: Deploy repository manifest
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy repository manifest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          cache: pip
+      - name: Install dependencies for build scripts
+        run: pip install -r requirements.txt
+      - name: Generate tokens for accessing to GitHub
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+      - name: Build repository json
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+        run: python3 build.py
+      - name: Deploy to firebase hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LOGILABO_WEB }}'
+          channelId: live
+          projectId: logilabo-web
+          target: logilabo-vpm

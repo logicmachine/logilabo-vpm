@@ -1,0 +1,10 @@
+{
+	"author": "logi",
+	"name": "Logilabo Avatar Tools",
+	"id": "dev.logilabo.vpm.avatars",
+	"url": "https://vpm.logilabo.dev/avatars.json",
+
+	"package_repos": {
+		"dev.logilabo.parameter-smoother": "logicmachine/avatar-parameter-smoother"
+	}
+}

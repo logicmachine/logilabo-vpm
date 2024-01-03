@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "logilabo-web"
+  },
+  "targets": {
+    "logilabo-web": {
+      "hosting": {
+        "logilabo-vpm": [
+          "logilabo-vpm"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
