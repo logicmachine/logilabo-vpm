@@ -5,6 +5,7 @@
 	"url": "https://vpm.logilabo.dev/avatars.json",
 
 	"package_repos": {
-		"dev.logilabo.parameter-smoother": "logicmachine/avatar-parameter-smoother"
+		"dev.logilabo.parameter-smoother": "logicmachine/avatar-parameter-smoother",
+		"dev.logilabo.camera-path-adapter": "logicmachine/camera-path-adapter"
 	}
 }
