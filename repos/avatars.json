@@ -5,8 +5,9 @@
 	"url": "https://vpm.logilabo.dev/avatars.json",
 
 	"package_repos": {
-		"dev.logilabo.parameter-smoother": "logicmachine/avatar-parameter-smoother",
+		"dev.logilabo.cahppe-adapter": "logicmachine/cahppe-adapter",
 		"dev.logilabo.camera-path-adapter": "logicmachine/camera-path-adapter",
-		"dev.logilabo.eye-tracking-animation": "logicmachine/eye-tracking-animation"
+		"dev.logilabo.eye-tracking-animation": "logicmachine/eye-tracking-animation",
+		"dev.logilabo.parameter-smoother": "logicmachine/avatar-parameter-smoother"
 	}
 }
